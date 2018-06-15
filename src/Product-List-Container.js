@@ -16,7 +16,19 @@ class ProductListContainer extends Component {
       {
         products: [
       {
-        img:'http://via.placeholder.com/350x150',
+        img:'http://via.placeholder.com/350x150?text=ProductOne',
+        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies purus est, in semper odio venenatis nec. Duis velit nibh, 
+              porttitor eu augue ut, sollicitudin vehicula elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies purus est, 
+              in semper odio venenatis nec. Duis velit nibh, porttitor eu augue ut, sollicitudin vehicula elit.`
+      },
+      {
+        img:'http://via.placeholder.com/350x150?text=ProductTwo',
+        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies purus est, in semper odio venenatis nec. Duis velit nibh, 
+              porttitor eu augue ut, sollicitudin vehicula elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies purus est, 
+              in semper odio venenatis nec. Duis velit nibh, porttitor eu augue ut, sollicitudin vehicula elit.`
+      },
+      {
+        img:'http://via.placeholder.com/350x150?text=ProductThree',
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies purus est, in semper odio venenatis nec. Duis velit nibh, 
               porttitor eu augue ut, sollicitudin vehicula elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies purus est, 
               in semper odio venenatis nec. Duis velit nibh, porttitor eu augue ut, sollicitudin vehicula elit.`
@@ -29,8 +41,6 @@ class ProductListContainer extends Component {
     const products = this.state.products.map((product, i) => (
       <ProductListRow image={product.img} descript={product.description} key={i}/>
     ));
-    console.log(this.state.products);
-    console.log(products);
     return (
       <div className="container mt-3">
         {products}
